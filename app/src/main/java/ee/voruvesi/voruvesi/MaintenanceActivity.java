@@ -1,6 +1,8 @@
 package ee.voruvesi.voruvesi;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,7 +28,8 @@ public class MaintenanceActivity extends AppCompatActivity {
         if (bar != null) {
             bar.setTitle(R.string.choose_maintenance_work);
         }
-        final String user = "Aimar";
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final String user = prefs.getString(LoginActivity.USERNAME, "Teadmata");
         final String workObject = getIntent().getStringExtra("workObject");
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         RecyclerView view = (RecyclerView) findViewById(R.id.recyclerView);

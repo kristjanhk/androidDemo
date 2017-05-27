@@ -73,7 +73,7 @@ public class Work {
             Date given = SDF.parse(givenDate);
             return work.before(given);
         } catch (ParseException e) {
-            if (!givenDate.equals("Teadmata")) {
+            if (!date.equals("Teadmata") && !givenDate.equals("Teadmata")) {
                 e.printStackTrace();
             }
         }

@@ -5,4 +5,6 @@
     <string name="last_maintenance_work_time">Viimati: %1$s</string>
     <string name="last_maintenance_work_user">Viimane teostaja: %1$s</string>
     <string name="day_work_complete">Päevatöö tehtud</string>
+    <string name="insert_username">Sisesta oma kasutajanimi</string>
+    <string name="login_continue">Jätka</string>
 </resources>

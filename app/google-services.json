@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "199947813974",
+    "firebase_url": "https://voru-vesi.firebaseio.com",
+    "project_id": "voru-vesi",
+    "storage_bucket": "voru-vesi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199947813974:android:e76abf2acd3e5fb8",
+        "android_client_info": {
+          "package_name": "ee.voruvesi.voruvesi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199947813974-8ktts8ppes5mub08v424o0q1c4r2v07m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1y8I52Px4v1Ex8vBiSWx0sX-Bzt4_nAY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

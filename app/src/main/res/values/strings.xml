@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Võru vesi</string>
+    <string name="choose_object">Vali objekt</string>
+    <string name="choose_maintenance_work">Vali hooldustöö</string>
+    <string name="last_maintenance_work_time">Viimati: %1$s</string>
+    <string name="last_maintenance_work_user">Viimane teostaja: %1$s</string>
+    <string name="day_work_complete">Päevatöö tehtud</string>
+</resources>

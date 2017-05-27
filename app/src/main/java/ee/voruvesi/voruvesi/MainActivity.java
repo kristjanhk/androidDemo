@@ -15,8 +15,9 @@ import ee.voruvesi.voruvesi.listener.WorkObjectsListener;
 import java.util.ArrayList;
 import java.util.List;
 
+// Objektide ekraan
 public class MainActivity extends AppCompatActivity {
-    private final List<String> workObjects = new ArrayList<>();
+    private final List<String> workObjects = new ArrayList<>(); //list objektidest
 
     // TODO: 26.05.2017 lifecycle stuff
     // TODO: 27/05/2017 tõlked -> est, eng
@@ -27,22 +28,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar bar = getSupportActionBar();
         if (bar != null) {
-            bar.setTitle(R.string.choose_object);
+            bar.setTitle(R.string.choose_object); //määrame teksti menüüribale kui see eksisteerib (vanematel androididel ei pruugi vist)
         }
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        RecyclerView view = (RecyclerView) findViewById(R.id.recycler_view_main);
-        view.setHasFixedSize(true);
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference(); //firebase db
+        RecyclerView view = (RecyclerView) findViewById(R.id.recycler_view_main); //vaade mis hoiab endas kaarte
+        view.setHasFixedSize(true); //laius ei muutu kunagi
         view.setLayoutManager(new LinearLayoutManager(this));
-        RecyclerView.Adapter adapter = new ObjectsCardViewAdapter(workObjects, this);
-        view.setAdapter(adapter);
+        RecyclerView.Adapter adapter = new ObjectsCardViewAdapter(workObjects, this); //adapter objektidelisti ja kaartide vaate vahel
+        view.setAdapter(adapter); //määrame vaatele adapteri
+        //lisame andmebaasi "Objektid"-le kuulaja
         database.child("Objektid").addChildEventListener(
                 new WorkObjectsListener(workObjects, adapter, (ProgressBar) findViewById(R.id.progressBar)));
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) { //loome menüüriba
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu); //seame menüüribale layouti
         return true;
     }
 }

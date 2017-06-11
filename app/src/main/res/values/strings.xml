@@ -7,4 +7,7 @@
     <string name="day_work_complete">Päevatöö tehtud</string>
     <string name="insert_username">Sisesta oma kasutajanimi</string>
     <string name="login_continue">Jätka</string>
+    <string name="invalid_username">Kasutajanimi oli puudu!</string>
+    <string name="work_already_done">" töö on täna juba tehtud!"</string>
+    <string name="work_updated">" töö uuendatud!"</string>
 </resources>

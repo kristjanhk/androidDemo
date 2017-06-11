@@ -44,7 +44,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = userNameField.getText().toString(); //sisestatud kasutajanimi
                 if (username == null || username.length() == 0) { //kui seda polnud
-                    Toast.makeText(LoginActivity.this, "Username was invalid", Toast.LENGTH_SHORT).show(); //teade
+                    Toast.makeText(LoginActivity.this,
+                        getString(R.string.invalid_username), Toast.LENGTH_SHORT).show(); //teade
                     return;
                 }
                 prefs.edit().putString("username", username).apply(); //

@@ -88,11 +88,11 @@ public class MaintenanceCardViewAdapter extends RecyclerView.Adapter<Maintenance
                         workRef.setValue(map); //saadame väärtused
                         tickImage.setVisibility(View.VISIBLE); //teeme pildi nähtavaks
                         //anname teada et kõik õnnestus
-                        Toast.makeText(context, workName.getText() + " updated!",
+                        Toast.makeText(context, workName.getText() + context.getString(R.string.work_updated),
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         //anname teada et täna juba kirjas töö
-                        Toast.makeText(context, workName.getText() + " is already done today!",
+                        Toast.makeText(context, workName.getText() + context.getString(R.string.work_already_done),
                                 Toast.LENGTH_SHORT).show();
                     }
                 }
